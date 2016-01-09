@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.jhcpokemon.imagedemo.activity.PrimaryColorActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/pic"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lum_warp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_above="@id/change_rgba">
+
+        <SeekBar
+            android:id="@+id/change_lum"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="255"/>
+
+        <TextView
+            style="@style/TextDescription"
+            android:text="调节亮度" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/saturation_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/lum_warp">
+
+        <SeekBar
+            android:id="@+id/change_saturation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="255"/>
+
+        <TextView
+            style="@style/TextDescription"
+            android:text="调节饱和度" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/blue_wrap"
+        android:layout_above="@id/saturation_wrap"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <SeekBar
+        android:id="@+id/change_blue"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="255"/>
+
+        <TextView
+            style="@style/TextDescription"
+            android:text="调节蓝色" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/green_wrap"
+        android:layout_above="@id/blue_wrap"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/change_green"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="255"/>
+
+        <TextView
+            style="@style/TextDescription"
+            android:text="调节绿色" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/red_wrap"
+        android:layout_above="@id/green_wrap"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/change_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:max="255"/>
+
+        <TextView
+            style="@style/TextDescription"
+            android:text="调节红色" />
+    </LinearLayout>
+
+</RelativeLayout>

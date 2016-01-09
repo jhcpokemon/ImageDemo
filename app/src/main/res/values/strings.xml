@@ -1,0 +1,9 @@
+<resources>
+    <string name="title">图像特效</string>
+    <string name="app_name">ImageDemo</string>
+    <string name="rgba">调色</string>
+    <string name="matrix">颜色矩阵</string>
+    <string name="change">改变矩阵</string>
+    <string name="reset">重置矩阵</string>
+    <string name="pixel">像素点处理</string>
+</resources>
