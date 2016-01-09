@@ -11,23 +11,24 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        tools:src="@drawable/pic"/>
+        tools:src="@drawable/pic" />
 
     <LinearLayout
+        android:id="@+id/lum_warp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lum_warp"
+        android:layout_above="@id/change_rgba"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_above="@id/change_rgba">
+        android:orientation="horizontal">
 
         <SeekBar
             android:id="@+id/change_lum"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:max="255"/>
+            android:layout_weight="8"
+            android:max="255" />
 
         <TextView
             style="@style/TextDescription"
@@ -38,16 +39,17 @@
         android:id="@+id/saturation_wrap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:layout_above="@id/lum_warp"
         android:layout_marginBottom="10dp"
-        android:layout_above="@id/lum_warp">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <SeekBar
             android:id="@+id/change_saturation"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:max="255"/>
+            android:layout_weight="8"
+            android:max="255" />
 
         <TextView
             style="@style/TextDescription"
@@ -57,16 +59,18 @@
 
     <LinearLayout
         android:id="@+id/blue_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/saturation_wrap"
         android:layout_marginBottom="10dp"
-        android:gravity="center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <SeekBar
-        android:id="@+id/change_blue"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:max="255"/>
+        android:gravity="center_vertical">
+
+        <SeekBar
+            android:id="@+id/change_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:max="255" />
 
         <TextView
             style="@style/TextDescription"
@@ -75,16 +79,18 @@
 
     <LinearLayout
         android:id="@+id/green_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/blue_wrap"
         android:layout_marginBottom="10dp"
-        android:gravity="center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:gravity="center_vertical">
+
         <SeekBar
             android:id="@+id/change_green"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:max="255"/>
+            android:layout_weight="8"
+            android:max="255" />
 
         <TextView
             style="@style/TextDescription"
@@ -93,17 +99,18 @@
 
     <LinearLayout
         android:id="@+id/red_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/green_wrap"
         android:layout_marginBottom="10dp"
-        android:gravity="center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:gravity="center_vertical">
+
         <SeekBar
             android:id="@+id/change_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="8"
-            android:max="255"/>
+            android:max="255" />
 
         <TextView
             style="@style/TextDescription"

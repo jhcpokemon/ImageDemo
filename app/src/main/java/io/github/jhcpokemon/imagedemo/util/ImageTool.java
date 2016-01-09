@@ -15,25 +15,27 @@ public class ImageTool {
         Bitmap bitmap = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        ColorMatrix heuMatrix = new ColorMatrix();
-        heuMatrix.setRotate(0, red); //Change Red
-        heuMatrix.setRotate(1, green); //Change Green
-        heuMatrix.setRotate(2, blue); //Change Blue
-        //heuMatrix.setRotate(3, alpha);
-
-        ColorMatrix saMatrix = new ColorMatrix();
-        saMatrix.setSaturation(saturation);
-
-        ColorMatrix lumMatrix = new ColorMatrix();
-        lumMatrix.setScale(lum, lum, lum, 1); //lum of RGBA  alpha = 1 --> no translation
-
-        /**
-         * Union color matrix
-         */
         ColorMatrix imageMatrix = new ColorMatrix();
-        imageMatrix.postConcat(heuMatrix);
-        imageMatrix.postConcat(saMatrix);
-        imageMatrix.postConcat(lumMatrix);
+
+        ColorMatrix matrix = new ColorMatrix();
+        matrix.setRotate(0, red); //Change Red
+        imageMatrix.postConcat(matrix);
+
+        matrix.reset();
+        matrix.setRotate(1, green); //Change Green
+        imageMatrix.postConcat(matrix);
+
+        matrix.reset();
+        matrix.setRotate(2, blue); //Change Blue
+        imageMatrix.postConcat(matrix);
+
+        matrix.reset();
+        matrix.setSaturation(saturation);
+        imageMatrix.postConcat(matrix);
+
+        matrix.reset();
+        matrix.setScale(lum, lum, lum, 1); //lum of RGBA  alpha = 1 --> no translation
+        imageMatrix.postConcat(matrix);
 
         paint.setColorFilter(new ColorMatrixColorFilter(imageMatrix));
         canvas.drawBitmap(bmp, 0, 0, paint);
