@@ -17,7 +17,12 @@
         </activity>
         <activity android:name=".activity.PrimaryColorActivity" />
         <activity android:name=".activity.ColorMatrixActivity" />
-        <activity android:name=".activity.PixelsEffectActivity"/>
+        <activity android:name=".activity.PixelsEffectActivity" />
+        <activity android:name=".activity.TransformActivity" />
+        <activity android:name=".activity.XFermodeActivity" />
+        <activity android:name=".activity.ShaderActivity" />
+        <activity android:name=".activity.ReflectActivity" />
+        <activity android:name=".activity.MeshActivity"></activity>
     </application>
 
 </manifest>

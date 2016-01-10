@@ -6,4 +6,9 @@
     <string name="change">改变矩阵</string>
     <string name="reset">重置矩阵</string>
     <string name="pixel">像素点处理</string>
+    <string name="transform">变形矩阵</string>
+    <string name="xfermode">画笔遮罩</string>
+    <string name="shader">渐变效果</string>
+    <string name="reflect">反射效果</string>
+    <string name="mesh">扭曲效果</string>
 </resources>

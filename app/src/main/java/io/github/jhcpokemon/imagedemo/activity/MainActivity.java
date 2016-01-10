@@ -30,6 +30,26 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this,PixelsEffectActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.transform:
+                intent = new Intent(this,TransformActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.xfermode:
+                intent = new Intent(this,XFermodeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.shader:
+                intent = new Intent(this,ShaderActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.reflect:
+                intent = new Intent(this,ReflectActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.mesh:
+                intent = new Intent(this,MeshActivity.class);
+                startActivity(intent);
+                break;
             default:
                 break;
         }

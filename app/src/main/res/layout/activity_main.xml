@@ -42,4 +42,43 @@
         android:text="@string/pixel"
         android:onClick="doClick"/>
 
+    <Button
+        style="?attr/buttonBarButtonStyle"
+        android:id="@+id/transform"
+        android:text="@string/transform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doClick"/>
+
+    <Button
+        style="?attr/buttonBarButtonStyle"
+        android:id="@+id/xfermode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/xfermode"
+        android:onClick="doClick"/>
+
+    <Button
+        style="?attr/buttonBarButtonStyle"
+        android:id="@+id/shader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doClick"
+        android:text="@string/shader"/>
+
+    <Button
+        style="?attr/buttonBarButtonStyle"
+        android:id="@+id/reflect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doClick"
+        android:text="@string/reflect"/>
+
+    <Button
+        style="?attr/buttonBarButtonStyle"
+        android:id="@+id/mesh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doClick"
+        android:text="@string/mesh"/>
 </LinearLayout>
